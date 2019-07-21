@@ -93,10 +93,8 @@
             ],
             "scripts": [],
             "assets": [
-              "assets",
-              "favicon.ico",
-              "404.html",
-              "CNAME"
+              "src/favicon.ico",
+              "src/assets"
             ]
           }
         },
