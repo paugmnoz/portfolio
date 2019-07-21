@@ -19,6 +19,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { WoofmeComponent } from './components/case-studies/woofme/woofme.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
+import { LeeloComponent } from './components/case-studies/leelo/leelo.component';
 
 const appRoutes: Routes = [ 
   { path: 'about', component: AboutComponent },
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     IllustrationComponent,
     AboutComponent,
     ContactComponent,
-    WoofmeComponent
+    WoofmeComponent,
+    LeeloComponent
   ],
   
   imports: [
