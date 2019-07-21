@@ -1,0 +1,40 @@
+<section id="nav-bar"  class="firstdisplay">
+  <div >
+    <a routerLink="" routerLinkActive="active">
+        <img src="../../../assets/logo/icon.png" alt="">
+    </a>
+  </div>
+  <div class="menu">
+    <ul>
+      <li  routerLink="/projects" routerLinkActive="active" class="desktopmenu">projects <span class="circle"> adsfas</span></li>
+      <li routerLink="/about" routerLinkActive="active" class="desktopmenu">about</li>
+      <li routerLink="/contact" routerLinkActive="active" class="desktopmenu">contact</li>
+    </ul>
+   
+  </div>
+
+  <div class="menu-wrap">
+      <div class="toggler" [ngClass]="{'checked': isChecked}" (click)="hidemenu()"></div>
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="innermenu">
+        <div>
+          <div>
+            <ul>
+              <li><a routerLink="" routerLinkActive="active" (click)="hidemenu()"><img src="../../../assets//logo/icon.png" alt="" height="85px"></a></li>
+              <li><a  routerLink="/projects" routerLinkActive="active" (click)="hidemenu()">projects</a></li>
+              <li><a routerLink="/about" routerLinkActive="active" (click)="hidemenu()">about</a></li>
+              <li><a routerLink="/contact" routerLinkActive="active" (click)="hidemenu()">contact</a></li>
+            </ul>
+            <section class="inner-social">
+                <a href="https://www.behance.net/_paulagarcia" target="_blank"> <img src="../assets/social/be.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/polagmnoz/" target="_blank"> <img src="../assets/social/in.svg" alt=""></a>
+                <a href="https://github.com/paugmnoz" target="_blank"> <img src="../assets/social/git.svg" alt=""></a>
+                <a href="https://www.instagram.com/pau.la.design/" target="_blank"> <img src="../assets/social/ig.svg" alt=""></a>
+              </section>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

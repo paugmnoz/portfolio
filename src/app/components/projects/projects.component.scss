@@ -1,0 +1,150 @@
+@import './../../../variables.scss';
+section {
+    margin: 94px auto 0 auto;
+    padding: 0 30px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 80vh;
+    width: 90%;
+    max-width: 1920px;
+    div {
+        &.menu {
+            margin: -7rem 0 0 0;
+            padding:  0 0 0 20px;
+            width: 20%;
+        }
+        &.viz {
+            width: 80%;
+        }
+        h1{
+            cursor: pointer;
+
+        }
+        ul {
+            margin: 2rem 0 0 0;
+            li {
+                font-size: 19px;
+                font-weight: 300;
+                color: #b3b3b3;
+                list-style: none;
+                margin: 7px 0 ;
+                cursor: pointer;
+                .count {
+                    visibility: hidden;
+                    display: none;
+                    color: $maincolor;
+                    font-weight: 600;
+                }
+                &.active, &:hover {
+                    color: black;
+                    font-weight: 400;
+                    &::before {
+                        content: "\2022";
+                        color: $maincolor;
+                        font-weight: bold;
+                        display: inline-block; 
+                        width: 1em;
+                        margin-left: -1em;
+                      }
+                    .count {
+                        visibility: visible;
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.display {
+    visibility:visible;
+    opacity:1;
+    display: inherit;
+    animation: showsection 1s 1;
+   
+}
+@keyframes showsection {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+.undisplay {
+    display: none;
+    opacity:0;
+    visibility: hidden;
+    transition:all 0.3s linear,opacity 0.3s linear;
+    animation: hidesection 1s 1;
+
+}
+
+@keyframes hidesection {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@media (max-width: 780px)  {
+   section {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 94px 0 0 0;
+    height: auto;
+    width: 100%;
+    div {
+        &.menu {
+            margin: 2rem 0 0 0;
+            padding:  0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        &.viz {
+            width: 100%;
+            margin: 6rem 0 0 0;
+        }
+        ul {
+            margin: 1rem 0 0 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            li {
+                font-size: 19px;
+                font-weight: 300;
+                color: #b3b3b3;
+                list-style: none;
+                margin: 0.5rem 20px 0 0 ;
+                cursor: pointer;
+                .count {
+                    visibility: hidden;
+                    display: none;
+                    color: $maincolor;
+                    font-weight: 600;
+                }
+                &.active, &:hover {
+                    color: black;
+                    font-weight: 700;
+                    &::before {
+                        content: "";
+                    }
+                    &::after {
+                        content: "\2022";
+                        color: $maincolor;
+                        font-weight: 700;
+                        display: inline-block; 
+                        width: 0.5em;
+                        margin-left: -0.2em;
+                      }
+                    .count {
+                        visibility: hidden;
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+   }
+}

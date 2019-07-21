@@ -1,0 +1,75 @@
+      <ngx-slick-carousel class="carousel" 
+        #slickModal="slick-carousel" 
+        [config]="slideConfigv" 
+        (init)="slickInit($event)"
+        (breakpoint)="breakpoint($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide-cont">
+          <div  class="slide">
+              <img src="{{slide.img}}" alt="">
+          </div>
+           <p class="inner-bold">{{slide.ti}}</p>
+           <p>Welcome screen </p>
+        </div>
+      </ngx-slick-carousel>
+
+
+
+      
+   
+   .slick-slider {
+            width: 90%;
+            margin: auto;
+            background: transparent;
+            position: relative;
+            
+        .nav-btn {
+            height: 47px;
+            position: absolute;
+            width: 26px;
+            cursor: pointer;
+            top: 100px !important;
+            background-color: #232834;
+            &.prev-slide.slick-disabled,
+            &.next-slide.slick-disabled {
+                pointer-events: none;
+                opacity: 0.2;
+            }
+
+            &.prev-slide {
+                background: url('../../../../assets/nav-icon.svg') no-repeat scroll 0 0;
+                left: -33px;
+                &:hover {
+                    background-position: 0px -53px;
+                }
+            }
+            
+            &.next-slide {
+                background: url('../../../../assets/nav-icon.svg') no-repeat scroll -24px 0px;
+                right: -33px;
+                &:hover {
+                    background-position: -24px -53px;
+                }
+            }
+        }
+            .slide-cont {
+                text-align: center;
+                width: 20%;
+                &:focus {
+                    outline: 0;
+                    }
+                    .slide {
+                        height: 70vh;
+                        width: auto;
+                        cursor: w-resize;
+                        img {
+                            height: 100%;
+                            width: auto;
+                            margin: 0 auto;
+                        }
+          
+                    }
+            }
+            
+        }

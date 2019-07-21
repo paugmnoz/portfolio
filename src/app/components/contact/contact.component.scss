@@ -1,0 +1,64 @@
+@import '../../../variables.scss';
+section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    p {
+        font-size: 19px;
+
+    }
+    .text {
+        text-align: right;
+        margin: 2rem 0;
+    }
+    .email {
+        a{
+            font-size: 25px;
+            color: $maincolor;
+            font-weight: 800;
+        }
+    }
+}
+
+.contact-img {
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    img {
+        width: 450px;
+    }
+}
+
+
+@media (max-width: 780px)  {
+    .contact-img {
+        flex-direction: column;
+        overflow: hidden;
+        overflow-x: hidden;
+        img {
+            mix-blend-mode: multiply;
+            width: 350px;
+            height: auto;
+
+            &.pink {
+                margin: 0 0 0 -3rem;
+                align-self: flex-start;
+            }
+            &.blue {
+                margin: 8rem -3rem 0 0 ;
+                align-self: flex-end;
+            }
+        }
+        }
+}

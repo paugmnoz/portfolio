@@ -1,0 +1,58 @@
+<div class="c-scrolldown firstdisplay">
+  <div class="c-line"></div>
+</div>
+<section fullpage id="fullpage" [options]="config" (ref)="getRef($event)" class="firstdisplay">
+  <div class="section">
+    <span class="home">
+      <div class="text">
+        <div class="hello">
+          <div>
+            <p class="hi">Hello!</p>
+            <h2 class="text-intro">I'm </h2>
+            <h1>PAU <span><img src="../../../assets/logo/circle.png" alt=""></span> <span class="changing-text"
+                id="roll-1"> X</span><span class="changing-text" id="roll-2"> I</span> </h1>
+          </div>
+          <h1>DESIGNER</h1>
+        </div>
+        <div class="description">
+          <p>Designing
+            <br />
+            <span class="highlighted"> user engaging experiences </span>
+            <br />
+            based on user
+            <br />
+            context </p>
+        </div>
+      </div>
+      <div class="image">
+          <img id="ui" src="../../../assets/meui.png" alt="">
+          <img id="ux" src="../../../assets/meux.png" alt="">
+        </div>
+    </span>
+
+  </div>
+  <div class="section slide2" (click)="fullpage_api.moveSectionDown()">
+    <div class="recent-projects-cont">
+      <h3>Check out</h3>
+      <h1>LATEST PROJECTS</h1>
+      <span class="more-projects">
+        <div routerLink="/projects/woofme" routerLinkActive="active" class="project-cont">
+          <div class="cover">
+            <img class="one" src="../../../../../assets/projects/woof/cover.png" alt="">
+          </div>
+          <img class="two" src="../../../../../assets/projects/woof/cover-2.svg" alt="">
+          <h4> Woof me</h4>
+          <p class="year">2018</p>
+        </div>
+        <div class="project-cont">
+          <div class="cover">
+            <img class="one" src="../../../../../assets/projects/woof/cover.png" alt="">
+          </div>
+          <img class="two" src="../../../../../assets/projects/woof/cover-2.svg" alt="">
+          <h4> Woof me</h4>
+          <p class="year">2018</p>
+        </div>
+      </span>
+    </div>
+  </div>
+</section>
