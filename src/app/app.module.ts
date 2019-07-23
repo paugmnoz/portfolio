@@ -20,11 +20,13 @@ import { WoofmeComponent } from './components/case-studies/woofme/woofme.compone
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { LeeloComponent } from './components/case-studies/leelo/leelo.component';
+import { WipComponent } from './components/wip/wip.component';
 
 const appRoutes: Routes = [ 
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'projects/woofme', component: WoofmeComponent },
+  { path: 'projects/wip', component: WipComponent },
   { path: '', component: HomeComponent },
 ]
 @NgModule({
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     AboutComponent,
     ContactComponent,
     WoofmeComponent,
-    LeeloComponent
+    LeeloComponent,
+    WipComponent
   ],
   
   imports: [

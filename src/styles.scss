@@ -112,7 +112,7 @@ a {
     align-content: center;
     align-items: center;
     background-color: #ffb100;
-
+    border-radius: 2px;
     img {
       width: 100%;
       max-width: 1920px;
@@ -133,7 +133,15 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    .badges {
+      display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    img {
+      height: 50px;
+      margin: 0 0 0 15px;
+    }
+    }
     .tags {
       color: $grayDark;
       font-size: 16px;
@@ -279,10 +287,12 @@ a {
           max-width: 280px;
           position: relative;
           margin: 0 20px 0 0;
-
+          h4 {
+            color: white;
+            font-family: LilitaOne-Regular;
+          }
           &:hover h4 {
             color: $maincolor;
-
           }
 
           &:hover .cover img {

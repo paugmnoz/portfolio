@@ -28,14 +28,15 @@ div{
         opacity: 1;
     }
     .year {
+        font-size: 18px;
         opacity: 0;
     }
 
     .two {
         position: absolute;
-        top: -90px;
+        top: -120px;
         left: 25%;
-        max-width: 150px;
+        max-width: 200px;
         display: none;
         animation: showsection 1s 1;
 
@@ -52,7 +53,7 @@ div{
         padding: 0;
         background: #fff;
         overflow: hidden;
-       
+       border-radius: 2px;
         .one {
             position: relative;
             top: 0;

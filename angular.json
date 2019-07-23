@@ -27,11 +27,9 @@
                 "glob": "**/*",
                 "input": "src/assets/",
                 "output": "./assets/"
-              },{
-                "glob": "favicon.ico",
-                "input": "src",
-                "output": "./favicon.ico"  
-              }
+              },
+              "src/favicon.ico",
+              "src/CNAME"
             ],
             "styles": [
               "src/styles.scss",
@@ -104,11 +102,8 @@
                 "glob": "**/*",
                 "input": "src/assets/",
                 "output": "./assets/"
-              },{
-                "glob": "favicon.ico",
-                "input": "src",
-                "output": "/"  
-              }
+              }, 
+              "src/favicon.ico"
             ]
           }
         },
