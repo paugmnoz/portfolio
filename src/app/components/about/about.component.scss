@@ -7,7 +7,9 @@ img {
   user-select: none
 }
 
-
+.about-cont {
+  padding: 100px 30px 0 30px;
+}
 .c-scrolldown {
   width: 2px;
   height: $line-height;
@@ -174,14 +176,13 @@ img {
   transition: all 0.6s ease;
   -webkit-transition-delay: 0.32s;
   transition-delay: 0.32s;
-
+  margin: 0 1.5rem 0 0;
   .hint {
     display: none;
   }
 
   &:hover .super-box {
     opacity: 0.8;
-
   }
 
   &:hover .super-box:hover {
@@ -458,7 +459,7 @@ img {
     padding: 2rem 0 2rem 0;
 
     p {
-      margin: 1.5rem 0;
+      margin: 1.5rem 0 0.4rem 0;
       width: 80%;
       font-size: 17px;
       text-align: center;
@@ -486,11 +487,15 @@ img {
   }
 
   .skils-section {
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
   }
 
   .super-box {
     margin: 0;
+    overflow-x: hidden;
   }
 
   .c-scrolldown {

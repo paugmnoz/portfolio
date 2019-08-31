@@ -45,7 +45,7 @@ h1 {
 }
 
 .firstdisplay {
-  animation: showcomponent 1s 1;
+  animation: showcomponent 0.5s 1;
 }
 
 @keyframes showcomponent {
@@ -96,6 +96,7 @@ a {
 }
 
 .case-studie {
+  overflow-x: hidden;
   h1 {
     img {
       display: inline-block;
