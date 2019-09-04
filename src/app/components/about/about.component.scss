@@ -2,11 +2,119 @@
 $line-height: 80px;
 $line-height-abs: -80px;
 
+.about-img {
+  position: absolute;
+  top: 25vh;
+  right: 10%;
+  display: none;
+  height: 400px;
+  width: auto;
+  opacity: 0;
+  
+  &.me {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.link-text {
+  text-decoration: underline;
+  color: $dark;
+}
 img {
   pointer-events: none;
   user-select: none
 }
+.about-cont {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  height: auto;
+}
+.light-font {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 200;
+}
 
+.regular-font {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.highlighted {
+  color: $maincolor;
+  text-decoration: underline;
+}
+.h-ph {
+  cursor:default;
+}
+
+.text-about {
+  width: 500px;
+}
+
+.subtitle {
+  font-size: 25px;
+}
+.project-link {
+  text-decoration-line: underline;
+  &:hover {
+    color: $maincolor
+  }
+}
+#cali:hover {
+  img.city {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#draw:hover{
+  img.draw {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+
+  }
+}
+
+#poke:hover{
+  img.poke {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+
+  }
+}
+
+#colombia:hover {
+  img.colombia{
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#hcii:hover {
+  span {
+    img.hcii{
+      display: inherit;
+      visibility: visible;
+      opacity: 1;
+      top: 20vh;
+      height:500px;
+    }
+  }
+
+}
+#me:hover {
+  img.me {
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+  }
+}
 .about-cont {
   padding: 100px 30px 0 30px;
 }
