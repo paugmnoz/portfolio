@@ -1,13 +1,143 @@
 @import '../../../variables.scss';
 $line-height: 80px;
 $line-height-abs: -80px;
+p{
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.719);
+  width: auto;
+  display: inline-block;
+}
+.t-center {
+  text-align: center;
+  width: 100%;
+}
+.about-img {
+  position: absolute;
+  top: 200px;
+  right: 10%;
+  display: none;
+  height: 400px;
+  width: auto;
+  opacity: 0;
+  z-index: -1;
+  
+  &.me {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+  }
+}
 
+.about-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+
+  &.me {
+    margin: 5rem 0 1rem 0;
+  }
+}
+.link-text {
+  text-decoration: underline;
+  color: $dark;
+}
 img {
   pointer-events: none;
   user-select: none
 }
+.about-cont {
+  width: 100%;
+  max-width: 1250px;
+  margin: auto;
+  height: auto;
+}
+.light-font {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 200;
+}
 
+.regular-font {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
 
+.highlighted {
+  color: $maincolor;
+  text-decoration: underline;
+}
+.h-ph {
+  cursor:default;
+}
+
+.text-about {
+  width: 500px;
+}
+
+.subtitle {
+  font-size: 25px;
+}
+.project-link {
+  text-decoration-line: underline;
+  &:hover {
+    color: $maincolor
+  }
+}
+#cali:hover {
+  img.city {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#draw:hover{
+  img.draw {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+
+  }
+}
+
+#poke:hover{
+  img.poke {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+
+  }
+}
+
+#colombia:hover {
+  img.colombia{
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#hcii:hover {
+  span {
+    img.hcii{
+      display: inherit;
+      visibility: visible;
+      opacity: 1;
+      top: 20vh;
+      height:500px;
+    }
+  }
+
+}
+#me:hover {
+  img.me {
+    -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
+  }
+}
+.about-cont {
+  padding: 100px 30px 0 30px;
+}
 .c-scrolldown {
   width: 2px;
   height: $line-height;
@@ -174,14 +304,17 @@ img {
   transition: all 0.6s ease;
   -webkit-transition-delay: 0.32s;
   transition-delay: 0.32s;
-
+  margin: 0 1.5rem 0 0;
+  p{
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0);
+  }
   .hint {
     display: none;
   }
 
   &:hover .super-box {
     opacity: 0.8;
-
   }
 
   &:hover .super-box:hover {
@@ -416,6 +549,73 @@ img {
 
 
 @media (max-width: 780px) {
+ p{
+   font-size: 18px;
+ }
+#cali:hover {
+  img.city {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#draw:hover{
+  img.draw {
+    display: none;
+    visibility: hidden;
+
+  }
+}
+
+#poke:hover{
+  img.poke {
+    display: none;
+    visibility: hidden;
+
+  }
+}
+
+
+.highlighted {
+  color: $maincolor;
+  text-decoration: none;
+}
+
+#colombia:hover {
+  img.colombia{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#hcii:hover {
+  span {
+    img.hcii{
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+}
+.name {
+  margin: 10rem 0 0 0;
+}
+.about-mobile {
+  display: inherit;
+  visibility: visible;
+
+}
+
+.m-hidden {
+  display: none;
+}
+.about-img {
+
+  &.me {
+    display: none;
+    visibility: hidden;
+  }
+}
   .introabout {
     flex-direction: column;
     height: auto;
@@ -426,7 +626,6 @@ img {
     .right {
       width: 90%;
       padding: 0;
-
       p {
         width: 100%;
 
@@ -458,7 +657,7 @@ img {
     padding: 2rem 0 2rem 0;
 
     p {
-      margin: 1.5rem 0;
+      margin: 1.5rem 0 0.4rem 0;
       width: 80%;
       font-size: 17px;
       text-align: center;
@@ -486,11 +685,15 @@ img {
   }
 
   .skils-section {
-    padding: 4rem 0 0 0;
+    padding: 2rem 0 0 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15px;
   }
 
   .super-box {
     margin: 0;
+    overflow-x: hidden;
   }
 
   .c-scrolldown {
