@@ -1,20 +1,40 @@
 @import '../../../variables.scss';
 $line-height: 80px;
 $line-height-abs: -80px;
-
+p{
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.719);
+  width: auto;
+  display: inline-block;
+}
+.t-center {
+  text-align: center;
+  width: 100%;
+}
 .about-img {
   position: absolute;
-  top: 25vh;
+  top: 200px;
   right: 10%;
   display: none;
   height: 400px;
   width: auto;
   opacity: 0;
+  z-index: -1;
   
   &.me {
     display: inherit;
     visibility: visible;
     opacity: 1;
+  }
+}
+
+.about-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+
+  &.me {
+    margin: 5rem 0 1rem 0;
   }
 }
 .link-text {
@@ -285,6 +305,10 @@ img {
   -webkit-transition-delay: 0.32s;
   transition-delay: 0.32s;
   margin: 0 1.5rem 0 0;
+  p{
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0);
+  }
   .hint {
     display: none;
   }
@@ -525,6 +549,73 @@ img {
 
 
 @media (max-width: 780px) {
+ p{
+   font-size: 18px;
+ }
+#cali:hover {
+  img.city {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#draw:hover{
+  img.draw {
+    display: none;
+    visibility: hidden;
+
+  }
+}
+
+#poke:hover{
+  img.poke {
+    display: none;
+    visibility: hidden;
+
+  }
+}
+
+
+.highlighted {
+  color: $maincolor;
+  text-decoration: none;
+}
+
+#colombia:hover {
+  img.colombia{
+    display: none;
+    visibility: hidden;
+  }
+}
+
+#hcii:hover {
+  span {
+    img.hcii{
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+}
+.name {
+  margin: 10rem 0 0 0;
+}
+.about-mobile {
+  display: inherit;
+  visibility: visible;
+
+}
+
+.m-hidden {
+  display: none;
+}
+.about-img {
+
+  &.me {
+    display: none;
+    visibility: hidden;
+  }
+}
   .introabout {
     flex-direction: column;
     height: auto;
@@ -535,7 +626,6 @@ img {
     .right {
       width: 90%;
       padding: 0;
-
       p {
         width: 100%;
 
