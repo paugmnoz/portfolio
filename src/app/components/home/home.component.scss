@@ -3,32 +3,53 @@
 $line-height: 80px;
 $line-height-abs: -80px;
 
-.c-scrolldown {
-  width: 2px;
-  height: $line-height;
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  overflow: hidden;
+.slide1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  .c-scrolldown {
+    width: 2.5px;
+    height: $line-height;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 2000;
 
-  .c-line {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: linear-gradient(to bottom, $maincolor 50%, rgba(255, 255, 255, 0) 50%);
+    .c-line {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: linear-gradient(to bottom, $maincolor 50%, rgba(255, 255, 255, 0) 50%);
+      background-position: 0 $line-height-abs;
+      background-size: 100% 200%;
+      animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    }
+  }
+
+}
+@keyframes scrolldown {
+  0% {
     background-position: 0 $line-height-abs;
-    background-size: 100% 200%;
-    animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+  }
+
+  75% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 $line-height;
   }
 }
-
 .home {
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 100vh;
+  width: 100%;
   max-height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
@@ -89,46 +110,46 @@ $line-height-abs: -80px;
             }
 
             25% {
-                margin-left: 0;
-                opacity: 1;
+              margin-left: 0;
+              opacity: 1;
             }
 
             50% {
-                margin-left: -30px;
-                opacity: 0;
+              margin-left: -30px;
+              opacity: 0;
             }
 
             75% {
-                margin-left: -30px;
+              margin-left: -30px;
               opacity: 0;
             }
 
             100% {
-                margin-left: 0;
+              margin-left: 0;
               opacity: 1;
             }
           }
 
           @keyframes roll2 {
             0% {
-                opacity: 0;
-              }
-  
-              25% {
-                opacity:0;
-              }
-  
-              50% {
-                opacity: 1;
-              }
-  
-              75% {
-                opacity: 1;
-              }
-  
-              100% {
-                opacity: 0;
-              }
+              opacity: 0;
+            }
+
+            25% {
+              opacity: 0;
+            }
+
+            50% {
+              opacity: 1;
+            }
+
+            75% {
+              opacity: 1;
+            }
+
+            100% {
+              opacity: 0;
+            }
           }
         }
       }
@@ -163,6 +184,7 @@ $line-height-abs: -80px;
       height: 100%;
       position: absolute;
       left: 0;
+
       &#ux {
         animation: imgFade 8s infinite;
       }
@@ -176,26 +198,27 @@ $line-height-abs: -80px;
 }
 
 @keyframes imgFade2 {
-    0% {
-      opacity: 0;
-    }
-  
-    25% {
-      opacity: 0;
-    }
-  
-    50% {
-      opacity: 1;
-    }
-  
-    75% {
-      opacity: 1;
-    }
-  
-    100% {
-      opacity: 0;
-    }
+  0% {
+    opacity: 0;
   }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes imgFade {
   0% {
     opacity: 1;
@@ -220,8 +243,8 @@ $line-height-abs: -80px;
 
 .slide2 {
   div.recent-projects-cont {
-    width: 100vw;
-    height: calc(100vh - 94px);
+    width: 100%;
+    height: auto;
     max-width: 1920px;
     margin: 94px auto 0 auto;
     background-color: $dark;
@@ -232,7 +255,7 @@ $line-height-abs: -80px;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    overflow-y: auto;
+    overflow-y: hidden;
 
     h1,
     h3 {
@@ -257,19 +280,20 @@ $line-height-abs: -80px;
           top: -80px;
           left: 25%;
         }
+
         .year {
           font-size: 18px;
           opacity: 0;
-      }
-      h4 {
-        font-family: LilitaOne-Regular;
-        font-size: 19px;
-      }
+        }
+
+        h4 {
+          font-family: LilitaOne-Regular;
+          font-size: 19px;
+        }
       }
     }
   }
 }
-
 
 @media (min-width: 781px) and (max-width: 1000px) {
   .home {
@@ -294,20 +318,31 @@ $line-height-abs: -80px;
   .slide2 {
     div.recent-projects-cont {
       padding: 1rem 0 0 0;
+
       h3 {
         font-weight: 200;
         margin: 0 0 0.5rem 0;
       }
+
       .more-projects {
         margin: 0.5rem 0 0 0;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 90%;
+    
         .project-cont {
-          margin:  0;
+          margin:   0;
+          width: 100%;
           h4 {
             font-size: 16px
           }
+
           .cover {
-            max-height: 150px ;
+            width: 100%;
+            max-height: 80vw;
           }
+
           .two {
             top: 10px;
             left: 25%;
@@ -320,7 +355,7 @@ $line-height-abs: -80px;
   .home {
     flex-direction: column;
     justify-content: space-around;
-
+    width: 100%;
     .text {
       display: flex;
       flex-direction: column;
@@ -330,7 +365,6 @@ $line-height-abs: -80px;
       margin: auto;
       width: auto;
       height: 90vh;
-
       .hello {
         margin: -3rem 0 0 0;
 
@@ -356,9 +390,11 @@ $line-height-abs: -80px;
       z-index: -1;
       opacity: 0.5;
       width: 100%;
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       img {
         width: 100%;
         height: auto;

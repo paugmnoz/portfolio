@@ -8,6 +8,7 @@ import { NgModule }             from '@angular/core';
 import { ProjectsComponent } from './projects.component';
 import { VizComponent } from './viz/viz.component';
 import { WoofmeComponent } from '../case-studies/woofme/woofme.component';
+import { BioacousticComponent } from '../case-studies/bioacoustic/bioacoustic.component';
 
 
   const projectsRoutes: Routes = [
@@ -41,8 +42,7 @@ import { WoofmeComponent } from '../case-studies/woofme/woofme.component';
         { 
           path: 'woof-me', 
           component: WoofmeComponent 
-        }
-        
+        },
       ]
     },
     

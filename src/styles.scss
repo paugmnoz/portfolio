@@ -46,7 +46,7 @@ h1 {
 }
 
 .firstdisplay {
-  animation: showcomponent 0.5s 1;
+  animation: showcomponent 1.3s 1;
 }
 
 @keyframes showcomponent {
@@ -113,7 +113,13 @@ a {
     justify-content: flex-end;
     align-content: center;
     align-items: center;
-    background-color: #ffb100;
+    &#woof {
+      background-color: #ffb100;
+    } 
+    &#bio {
+      background-color: #8feb75;
+    }
+    
     border-radius: 2px;
     img {
       width: 100%;
@@ -143,6 +149,9 @@ a {
       height: 50px;
       margin: 0 0 0 15px;
     }
+    }
+    .brmobile {
+      display: none
     }
     .tags {
       color: $grayDark;
@@ -256,7 +265,12 @@ a {
         width: 90%;
         max-width: 1300px;
         margin: 0 auto;
-
+        a {
+          color: white;
+          &:hover{
+            color: $maincolor;
+          }
+        }
         #email {
           color: $maincolor;
           margin: 3rem 0 0 0;
@@ -289,6 +303,7 @@ a {
           max-width: 280px;
           position: relative;
           margin: 0 20px 0 0;
+          cursor: pointer;
           h4 {
             color: white;
             font-family: LilitaOne-Regular;
@@ -396,6 +411,7 @@ a {
     max-width: 280px;
     position: relative;
     margin: 0 20px 0 0;
+    cursor: pointer;
 
     &:hover h4 {
       color: $maincolor;
@@ -419,7 +435,7 @@ a {
     .two {
       position: absolute;
       top: 10px;
-      left: 25%;
+      left: 30%;
       max-width: 150px;
       display: none;
       animation: showsection 1s 1;
@@ -440,7 +456,7 @@ a {
 
     .cover {
       width: 280px;
-      height: 180px;
+      height: 280px;
       max-width: 400px;
       margin: 0 0 10px 0;
       padding: 0;
@@ -461,8 +477,8 @@ a {
         width: 100%;
         -webkit-transform: scale(1.07);
         transform: scale(1.07);
-        -webkit-transition: .3s ease-in-out;
-        transition: .3s ease-in-out;
+        -webkit-transition: .4s ease-in-out;
+        transition: .4s ease-in-out;
 
         &:hover {
           -webkit-transform: scale(1);
@@ -538,9 +554,20 @@ a {
       flex-direction: column;
       height: auto;
       margin: -200px auto 0 auto;
-
+        .badges {
+          display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img {
+          height: 50px;
+          margin: 0;
+        }
+        }
       br {
         display: none; // hide the BR tag for wider screens (i.e. disable the line break)
+      }
+      .brmobile {
+        display: inherit
       }
 
       .second-title {

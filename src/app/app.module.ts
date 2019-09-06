@@ -21,11 +21,13 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 import { LeeloComponent } from './components/case-studies/leelo/leelo.component';
 import { WipComponent } from './components/wip/wip.component';
+import { BioacousticComponent } from './components/case-studies/bioacoustic/bioacoustic.component';
 
 const appRoutes: Routes = [ 
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'projects/woofme', component: WoofmeComponent },
+  { path: 'projects/bioviz', component: BioacousticComponent},
   { path: 'projects/wip', component: WipComponent },
   { path: '', component: HomeComponent },
 ]
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     ContactComponent,
     WoofmeComponent,
     LeeloComponent,
-    WipComponent
+    WipComponent,
+    BioacousticComponent
   ],
   
   imports: [
@@ -53,6 +56,7 @@ const appRoutes: Routes = [
     SlickCarouselModule,
     RouterModule.forRoot(
       appRoutes,
+      { scrollPositionRestoration: 'enabled' }
       //{ enableTracing: true } // <-- debugging purposes only
     ),
     ProjectsModule,

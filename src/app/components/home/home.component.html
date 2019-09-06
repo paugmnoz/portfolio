@@ -1,53 +1,54 @@
-<section fullpage id="fullpage" [options]="config" (ref)="getRef($event)" class="firstdisplay">
-  <div class="section">
-    <span class="home">
-      <div class="text">
-        <div class="hello">
-          <div>
-            <p class="hi">Hello!</p>
-            <h2 class="text-intro">I'm </h2>
-            <h1>PAU <span><img src="./assets/logo/circle.png" alt=""></span> <span class="changing-text"
-                id="roll-1"> X</span><span class="changing-text" id="roll-2"> I</span> </h1>
-          </div>
-          <h1>DESIGNER</h1>
-        </div>
-        <div class="description">
-          <p>Designing
-            <br />
-            <span class="highlighted"> user engaging experiences </span>
-            <br />
-            based on user
-            <br />
-            context </p>
-        </div>
-      </div>
-      <div class="image">
-          <img id="ui" src="./assets/meui.png" alt="">
-          <img id="ux" src="./assets/meux.png" alt="">
-        </div>
-    </span>
-
+<section class="firstdisplay slide1">
+  <div class="c-scrolldown firstdisplay">
+    <div class="c-line"></div>
   </div>
-  <div class="section slide2" (click)="fullpage_api.moveSectionDown()">
+  <span class="home">
+    <div class="text">
+      <div class="hello">
+        <div>
+          <p class="hi">Hello!</p>
+          <h2 class="text-intro">I'm </h2>
+          <h1>PAU <span><img src="./assets/logo/circle.png" alt=""></span> <span class="changing-text" id="roll-1">
+              X</span><span class="changing-text" id="roll-2"> I</span> </h1>
+        </div>
+        <h1>DESIGNER</h1>
+      </div>
+      <div class="description">
+        <p>Designing in context to
+          <br />
+          <span class="highlighted"> enhance experiences </span>
+          <br />
+          with technology
+          <br />
+          and the world. </p>
+      </div>
+    </div>
+    <div class="image">
+      <img id="ui" src="./assets/meui.png" alt="">
+      <img id="ux" src="./assets/meux.png" alt="">
+    </div>
+  </span>
+  <div class=" slide2">
     <div class="recent-projects-cont">
-      <h3>Check out</h3>
+      <br>
+      <p>These are my</p>
       <h1>LATEST PROJECTS</h1>
       <span class="more-projects">
-          <div routerLink="/projects/woofme" class="project-cont">
-              <div class="cover">
-                <img class="one" src="./assets/projects/woof/cover.jpg" alt="">
-              </div>
-              <img class="two" src="./assets/projects/woof/cover-2.svg" width="170px" alt="">
-              <h4>WOOF ME</h4>
-              <p class="year">2018</p>
+        <div routerLink="/projects/woofme" class="project-cont">
+          <div class="cover">
+            <img class="one" src="./assets/projects/woof/cover.jpg" alt="">
           </div>
-          <div routerLink="/projects/wip" class="project-cont">
-            <div class="cover">
-                <img class="one" src="./assets/projects/mercatruck/cover1.jpg" alt="">
-              </div>
-              <img class="two" src="./assets/projects/mercatruck/cover2.png" alt="">
-              <h4>MERCATRUCK</h4>
-              <p class="year">2018</p>
+          <img class="two" src="./assets/projects/woof/cover-2.svg" width="170px" alt="">
+          <h4>WOOF ME</h4>
+          <p class="year">2018</p>
+        </div>
+        <div routerLink="/projects/bioviz" class="project-cont">
+          <div class="cover">
+            <img class="one" src="./assets/projects/bio/cover.jpg" alt="">
+          </div>
+          <img class="two" src="./assets/projects/bio/cover2.png" alt="">
+          <h4>BIOVIZ</h4>
+          <p class="year">2018</p>
         </div>
       </span>
     </div>
