@@ -1,0 +1,125 @@
+@import '../../../../variables.scss';
+
+.project-content {
+  position: relative;
+
+  .intro {
+    align-content: center;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+     >img {
+        width: 80%;
+        max-width: 350px;
+        height: auto;
+      }
+    }
+  }
+
+  .insights {
+      .right {
+        padding: 5rem 0 2.5rem 0;
+      }
+      .left {
+        img {
+          width: 120px;
+          height: auto;
+          margin: 5rem 0 0 0;
+        }
+        h2 {
+          margin: -1.5rem 0 0 0;
+        }
+      }
+      
+  }
+
+  .explain,
+  .mind {
+    padding: 5rem 0 2.5rem 0;
+
+    .left {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      ;
+
+      .quote {
+        position: relative;
+        display: inline-block;
+        font-weight: 300;
+      }
+
+      .icon {
+        position: absolute;
+        top: -80px;
+        left: 80%;
+        font-weight: 800;
+        font-size: 120px;
+        color: $lightgray;
+        mix-blend-mode: multiply;
+        user-select: none;
+      }
+    }
+  }
+
+  .question {
+    background-color: #2a2535;;
+    padding: 2rem 0;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      width: 50%;
+      max-width: 1000px;
+      margin: auto;
+      color: $gray;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+
+
+}
+
+.inner-bold {
+  font-weight: 700;
+
+  &.whitecolor {
+    color: white;
+  }
+}
+
+@media (max-width: 780px) {
+  .project-content {
+    .intro {
+      .left {
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .question {
+      height: auto;
+      padding: 2rem 1rem;
+
+      h2 {
+        width: 95%;
+        font-size: 23px;
+      }
+    }
+
+    .insights {
+      .right {
+        width: 95%;
+        margin: 0 auto;      }
+    }
+
+  }
+}

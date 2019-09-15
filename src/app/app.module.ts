@@ -28,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'projects/woofme', component: WoofmeComponent },
   { path: 'projects/bioviz', component: BioacousticComponent},
+  { path: 'projects/leelo', component: LeeloComponent},
   { path: 'projects/wip', component: WipComponent },
   { path: '', component: HomeComponent },
 ]
@@ -50,14 +51,13 @@ const appRoutes: Routes = [
     WipComponent,
     BioacousticComponent
   ],
-  
   imports: [
     BrowserModule,
     SlickCarouselModule,
     RouterModule.forRoot(
       appRoutes,
       { scrollPositionRestoration: 'enabled' }
-      //{ enableTracing: true } // <-- debugging purposes only
+  // { enableTracing: true } // <-- debugging purposes only
     ),
     ProjectsModule,
     AppRoutingModule,
