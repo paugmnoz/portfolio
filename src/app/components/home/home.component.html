@@ -1,8 +1,12 @@
-<section id="fullpage" class="firstdisplay">
+<section fullpage id="fullpage" [options]="config" (ref)="getRef($event)" class="firstdisplay" >
   <div class="section">
-    <p>Designing to make <br/>
-      <span class="bold-lilita">technology</span>  more  <br/>
-      <span class="bold-lilita">human</span>  <img src="./assets/logo/circle.png" alt=""> </p>
+    <span class="intro">
+      <p>Designing to make <br/>
+        <span class="bold-lilita">technology</span>  more  <br/>
+        <span class="bold-lilita">human</span>  <img src="./assets/logo/circle.png" alt=""> </p>
+        <img class="humantech" src="./assets/home/HumanTechHome.png" alt="">
+    </span>
+   
   </div>
 
   <div class="section"> 
