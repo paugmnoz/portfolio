@@ -20,21 +20,63 @@
     }
   }
 
+  .one-img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      margin: 4rem auto;
+      width: 80%;
+      height: auto;
+      max-width: 850px;
+    }
+  }
   .insights {
       .right {
-        padding: 5rem 0 2.5rem 0;
+        padding: 10rem 0 2.5rem 0;
+        ul {
+          margin: 0 0 0 1rem;
+        }
+        img {
+          width: 70%;
+          height: auto;
+          margin: 1rem 0 0 0;
+        }
       }
       .left {
+
         img {
-          width: 120px;
+          width: 80%;
           height: auto;
-          margin: 5rem 0 0 0;
+          margin: 1rem 0 0 0;
+
+          &.icon-title {
+            width: 120px;
+            height: auto;
+            margin: 5rem 0 0 0;
+          }
         }
+       
         h2 {
           margin: -1.5rem 0 0 0;
         }
       }
       
+  }
+
+  .findings {
+    .left {
+      .quote {
+        font-size: 19px;
+      }
+      .icon {
+        font-size: 59px;
+        bottom: 30px;
+        top: 0;
+      }
+    }
   }
 
   .explain,
@@ -73,6 +115,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &.yellow {
+      background-color: #FFC627;;
+      h2 {
+        color: #1a1a1a;
+        font-size: 18px;
+      }
+    }
 
     h2 {
       width: 50%;
@@ -95,13 +144,27 @@
   }
 }
 
+.case-studie .project-content .col-2 .left {
+  &.gifs {
+    padding: 0 0 0 3rem;
+
+  }
+}
+
 @media (max-width: 780px) {
+
   .project-content {
     .intro {
       .left {
         img {
-          margin: 0 auto;
-        }
+          width: 97%;
+          margin: -6rem auto 0 auto;        }
+      }
+    }
+    .one-img {
+      img {
+        width: 97%;
+        margin: 2rem auto;
       }
     }
 
@@ -116,9 +179,19 @@
     }
 
     .insights {
+      .left {
+        img {
+          width: 97%;
+        }
+      }
       .right {
         width: 95%;
-        margin: 0 auto;      }
+        margin: 0 auto;   
+        padding: 3rem 0 2.5rem 0; 
+        img {
+          width: 97%;
+        }
+      }
     }
 
   }
