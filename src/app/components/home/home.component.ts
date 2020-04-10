@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import Parallax from 'parallax-js';
 
 @Component({
   selector: 'app-home',
@@ -6,13 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  @ViewChild('scene') sceneElement:ElementRef;
+  
   ngOnInit() {
   }
 
   config: any;
   fullpage_api: any;
-  constructor() { 
+  scene: any;
+  parallaxInstance: any;
+  sceneDiv: any;
+
+  ngAfterViewInit() {
+    console.log(this.sceneElement.nativeElement);
+    this.sceneDiv = this.sceneElement.nativeElement;
+    var scene = this.sceneDiv;
+    var parallaxInstance = new Parallax(scene);
+  }
+  constructor() {
      // for more details on config options please visit fullPage.js docs
      this.config = {
 

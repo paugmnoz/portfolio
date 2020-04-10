@@ -29,12 +29,12 @@
         flex-direction: row;
         list-style: none;
         cursor: pointer;
-        border-bottom: solid 4px $noneColor;
 
         li {
           margin: 0 0 0 2rem;
           background-color: white;
           padding: 2px 8px;
+          border-bottom: solid 4px $noneColor;
 
           &#mobilemenu {
             display: none;

@@ -95,7 +95,9 @@ a {
     color: $maincolor;
   }
 }
-
+.highlighted {
+  color: $maincolor;
+}
 .case-studie {
   overflow-x: hidden;
   h1 {

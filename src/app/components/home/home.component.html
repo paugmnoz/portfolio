@@ -1,15 +1,51 @@
-<section fullpage id="fullpage" [options]="config" (ref)="getRef($event)" class="firstdisplay" >
-  <div class="section">
-    <span class="intro">
-      <p>Designing to make <br/>
-        <span class="bold-lilita">technology</span>  more  <br/>
-        <span class="bold-lilita">human</span>  <img src="./assets/logo/circle.png" alt=""> </p>
+<span class="hola">
+  <img class="top" src="./assets/home/curvetop.png" alt="">
+  <img class="bottom" src="./assets/home/curvebottom.png" alt="">   
+  <section fullpage id="fullpage" [options]="config" (ref)="getRef($event)"  >   
+    <div class="section">
+      <span class="intro firstdisplay">
+        <p>Designing to make <br/>
+          <span class="bold-lilita">technology</span>  more  <br/>
+          <span class="bold-lilita">human</span>  <img src="./assets/logo/circle.png" alt=""> </p>
         <img class="humantech" src="./assets/home/HumanTechHome.png" alt="">
-    </span>
-   
-  </div>
+      </span>
+    
+    </div>
 
-  <div class="section"> 
-    2
-  </div>
-</section>
+    <div class="section"> 
+      <span class="passion">
+        <p>I'm Paula, I ❤️ to</p>
+        <div class="passions">
+          <article class="passion-card">
+            <div #scene id="scene" data-friction-x="0.1" pointer-events="true"  data-friction-y="0.1" class="illustration" >
+              <img  data-depth="0" class="pau-img" src="./assets/home/ux-designer.png" alt="">
+              <img data-depth="1" class="hover-parallax" src="./assets/home/ux-designer-wires.png" alt="">
+            </div>
+            <p class="title highlighted">Design Experiences</p>
+            <p class="desc">User Experience - Research</p>
+            <p class="highlighted linkto">Click to check out related work</p>
+          </article>
+          <article class="passion-card">
+            <div #scene id="scene" data-friction-x="0.1" pointer-events="true"  data-friction-y="0.1" class="illustration" >
+              <img  data-depth="0" class="pau-img" src="./assets/home/ux-designer.png" alt="">
+              <img data-depth="1" class="hover-parallax" src="./assets/home/ux-designer-wires.png" alt="">
+            </div>
+            <p class="title highlighted">Design Experiences</p>
+            <p class="desc">User Experience - Research</p>
+            <p class="highlighted linkto">Click to check out related work</p>
+          </article>
+          <article class="passion-card">
+            <div #scene id="scene" data-friction-x="0.1" pointer-events="true"  data-friction-y="0.1" class="illustration" >
+              <img  data-depth="0" class="pau-img" src="./assets/home/ux-designer.png" alt="">
+              <img data-depth="1" class="hover-parallax" src="./assets/home/ux-designer-wires.png" alt="">
+            </div>
+            <p class="title highlighted">Design Experiences</p>
+            <p class="desc">User Experience - Research</p>
+            <p class="highlighted linkto">Click to check out related work</p>
+          </article>
+        </div>
+      </span>
+      
+    </div>
+  </section>
+</span>
