@@ -22,12 +22,17 @@
     top: 0;
     width: 200px;
     right: 0;
+    z-index: 2;
+    pointer-events: none;
   }
   .bottom {
     position: fixed;
     width: 200px;
     bottom: 0;
     left: 0;
+    z-index: 2;
+    pointer-events: none;
+
   }
 }
 
@@ -120,7 +125,9 @@
       border-radius: 10px;
       margin: 0 2.5rem 0 0;
       padding: 15px;
-      
+      &:focus {
+        outline: none;
+      }
       :last-child {
         margin: 0 0 0 0;
       }
@@ -151,6 +158,7 @@ box-shadow:  25px 25px 51px #e4e4e4,
           top: 0;
           left: 0;
           opacity: 0;
+          pointer-events: none;
         }
       }
       .title {
@@ -171,6 +179,71 @@ box-shadow:  25px 25px 51px #e4e4e4,
     } 
   }
 }
+
+.home-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  h2 {
+    font-weight: 400;
+    font-size: 26px;
+  }
+  .grayDiv {
+    background-color: #f7f7f7;
+    height: 150px;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .take-a-look {
+    align-self: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 0 0 0;
+    h2 {
+      font-weight: 600;
+    }
+    p {
+      font-size: 19px;
+      margin: 2rem 0 0 0;
+      cursor: pointer;
+      &:hover {
+        color: $maincolor;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .foot {
+    padding: 3rem 0;
+    background-color: $dark;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .mail {
+      a {
+
+        color: $maincolor;
+        font-weight: 600;
+      font-size: 24px;
+      }
+    }
+    p {
+      margin: 3rem 0 0 0;
+      color: #776d92;
+    }
+  }
+}
 @media (min-width: 781px) and (max-width: 1000px) {
   .intro {
     .humantech {
@@ -183,12 +256,72 @@ box-shadow:  25px 25px 51px #e4e4e4,
 }
 
 @media (max-width: 780px) {
+
+  
   .intro {
     .humantech {
       width: 90%;
       max-width: 700px;
       margin-top: -3rem;
       mix-blend-mode: multiply;
+    }
+  }
+  .home-footer {
+    .foot {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      padding: 3rem;
+      .greet {
+        h2 {
+          font-size: 23px;
+        }
+        margin: 0 0 2rem 0;
+      }
+      p {
+        width: 70%;
+        text-align: right;
+        margin: 3rem 0 0 30%;
+      }
+    }
+  }
+  .passion {
+    .pass-intro {
+      margin: 0 0 0 0;
+    }
+    .passions {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding: 3rem;
+      width: 95%;
+      .passion-card {
+        .illustration {
+        .hover-parallax {
+          opacity: 1;
+        }
+      }
+      }
+      
+/* width */
+&::-webkit-scrollbar {
+  max-width: 5px !important;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+  background: #fafafa;
+}
+
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: #ffffff;  
+  border: 0.5px solid #c9c9c9;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #a5a3aa;
+}
     }
   }
 

@@ -16,7 +16,7 @@
       <span class="passion">
         <p class="pass-intro">I'm Paula, I ❤️ to</p>
         <div class="passions">
-          <article class="passion-card firstdisplay">
+          <article routerLink="/projects/uxresearch" routerLinkActive="active" class="passion-card firstdisplay">
             <div #scene id="scene" data-friction-x="0.1" pointer-events="true"  data-friction-y="0.1" class="illustration" >
               <img  data-depth="0" class="pau-img" src="./assets/home/ux-designer.png" alt="">
               <img data-depth="1" class="hover-parallax" src="./assets/home/wiresux-designer.png" alt="">
@@ -25,7 +25,7 @@
             <p class="desc">User Experience - Research</p>
             <p class="highlighted linkto">Click to check out related work</p>
           </article>
-          <article class="passion-card firstdisplay">
+          <article routerLink="/projects/branding" routerLinkActive="active"  class="passion-card firstdisplay">
             <div #scene2 id="scene2" data-friction-x="0.1" pointer-events="true"  data-friction-y="0.1" class="illustration" >
               <img  data-depth="0" class="pau-img" src="./assets/home/visual-designer.png" alt="">
               <img data-depth="1" class="hover-parallax" src="./assets/home/wiresvisual-designer.png" alt="">
@@ -34,7 +34,7 @@
             <p class="desc">Branding - Interfaces - Illustration</p>
             <p class="highlighted linkto">Click to check out related work</p>
           </article>
-          <article class="passion-card firstdisplay">
+          <article routerLink="/projects/ui" routerLinkActive="active"  class="passion-card firstdisplay">
             <div #scene3 id="scene3" data-friction-x="0.1" pointer-events="true"  data-friction-y="0.1" class="illustration" >
               <img  data-depth="0" class="pau-img" src="./assets/home/info-designer.png" alt="">
               <img data-depth="1" class="hover-parallax" src="./assets/home/wiresinfo-designer.png" alt="">
@@ -46,6 +46,28 @@
         </div>
       </span>
       
+    </div>
+
+    <div class="section">
+      <span class="home-footer">
+        <div class="grayDiv"></div>
+        <div class="take-a-look">
+          <h2>Take a look at</h2>
+          <p routerLink="/projects" routerLinkActive="active">my projects</p>
+          <p routerLink="/about" routerLinkActive="active">about me section</p>
+        </div>
+        <div class="foot">
+          <div>
+            <h2>Let's talk</h2>
+            <h2 class="mail"> <a a href="mailto:hola@paugmnoz.design?Subject=Hello%20Pau" target="_top"> hola@paugmnoz.design</a> </h2>
+
+            <p>Designed and developed by myself in Jul 2019. Last updated April 2020.</p>
+          </div>
+          <div class="greet">
+            <h2>Greetings from <br> Cali, Colombia. </h2>
+          </div>
+        </div>
+      </span>
     </div>
   </section>
 </span>
