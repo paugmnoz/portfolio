@@ -44,6 +44,8 @@ export class HomeComponent implements OnInit {
       licenseKey: 'YOUR LICENSE KEY HERE',
       anchors: ['', 'love-to', 'thirdPage', 'fourthPage', 'lastPage'],
       menu: '#menu',
+      scrollHorizontally: true,
+      scrollOverflow: true,
 
       // fullpage callbacks
       afterResize: () => {

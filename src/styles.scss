@@ -550,7 +550,24 @@ a {
     opacity: 1;
   }
 }
+.mainbtn {
+  margin: 0.3rem 0;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
 
+  border: 1px solid #ff144a;
+  background-color: white;
+  color: #ff144a;
+  &.selected {
+
+    border: none;
+    background-color: #ff144a;
+    color: white;
+  }
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 600;
+}
 @media (max-width: 780px) {
 
   /* width */
