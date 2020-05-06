@@ -7,11 +7,11 @@ import Parallax from 'parallax-js';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('scene') sceneElement:ElementRef;
-  @ViewChild('mob_scene') mobSceneElement:ElementRef;
-  @ViewChild('scene2') sceneElement2:ElementRef;
-  @ViewChild('scene3') sceneElement3:ElementRef;
-  
+  @ViewChild('scene') sceneElement: ElementRef;
+  @ViewChild('mob_scene') mobSceneElement: ElementRef;
+  @ViewChild('scene2') sceneElement2: ElementRef;
+  @ViewChild('scene3') sceneElement3: ElementRef;
+
   ngOnInit() {
   }
 
@@ -34,15 +34,15 @@ export class HomeComponent implements OnInit {
     var mobScene = this.mobSceneDiv;
     var scene2 = this.sceneDiv2;
     var scene3 = this.sceneDiv3;
-    
+
     var parallaxInstance = new Parallax(scene);
     var mobParallaxInstance = new Parallax(mobScene);
     var parallaxInstance2 = new Parallax(scene2);
     var parallaxInstance3 = new Parallax(scene3);
   }
   constructor() {
-     // for more details on config options please visit fullPage.js docs
-     this.config = {
+    // for more details on config options please visit fullPage.js docs
+    this.config = {
 
       // fullpage options
       licenseKey: 'YOUR LICENSE KEY HERE',
@@ -50,6 +50,9 @@ export class HomeComponent implements OnInit {
       menu: '#menu',
       scrollHorizontally: true,
       scrollOverflow: true,
+      showActiveTooltip: true,
+      slidesNavigation: true,
+      slidesNavPosition: 'bottom',
 
       // fullpage callbacks
       afterResize: () => {

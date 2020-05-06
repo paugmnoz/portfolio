@@ -65,7 +65,7 @@ li:focus {
 
 a {
   text-decoration: none;
-  color: black;
+  color: $maincolor;
 }
 
 ::selection {
@@ -95,11 +95,110 @@ a {
     color: $maincolor;
   }
 }
+
 .highlighted {
   color: $maincolor;
 }
+
+.fp-controlArrow.fp-next {
+  right: 30px;
+  border-color: $dark !important;
+}
+
+.next-img {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.fp-slidesNav ul li a {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 1px solid $maincolor;
+  background-color: transparent;
+  border-radius: 50%;
+
+  &.active {
+    background-color: $maincolor;
+
+  }
+}
+
+.fp-slidesNav {
+  position: absolute;
+  z-index: 4;
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  left: 0 !important;
+  right: 0;
+  margin: 0 auto !important;
+
+}
+
+.fp-slidesNav.fp-bottom {
+  bottom: 3rem;
+}
+
+.fp-slidesNav {
+  width: 400px;
+}
+
+.fp-slidesNav ul li {
+  display: inline-block;
+}
+
+.fp-sr-only {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  height: 12px;
+  width: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 100%;
+}
+
+.fp-slidesNav ul li a span {
+  height: 12px;
+  width: 12px;
+}
+
+
+.fp-slidesNav ul {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.fp-slidesNav ul li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 7px;
+  position: relative;
+}
+
 .case-studie {
   overflow-x: hidden;
+
   h1 {
     img {
       display: inline-block;
@@ -115,17 +214,21 @@ a {
     justify-content: flex-end;
     align-content: center;
     align-items: center;
+
     &#woof {
       background-color: #ffb100;
-    } 
+    }
+
     &#bio {
       background-color: #8feb75;
     }
+
     &#lee {
       background-color: #010006;
     }
-    
+
     border-radius: 2px;
+
     img {
       width: 100%;
       max-width: 1920px;
@@ -146,19 +249,23 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     .badges {
       display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 300px;
-    img {
-      height: 50px;
-      margin: 0 0 0 15px;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 300px;
+
+      img {
+        height: 50px;
+        margin: 0 0 0 15px;
+      }
     }
-    }
+
     .brmobile {
       display: none
     }
+
     .tags {
       color: $grayDark;
       font-size: 16px;
@@ -209,11 +316,13 @@ a {
       .left {
         width: 45%;
         padding: 0 0 0 10rem;
+
         .quote {
           position: relative;
           display: inline-block;
           font-weight: 300;
         }
+
         .icon {
           position: absolute;
           top: -80px;
@@ -286,12 +395,15 @@ a {
         width: 90%;
         max-width: 1300px;
         margin: 0 auto;
+
         a {
           color: white;
-          &:hover{
+
+          &:hover {
             color: $maincolor;
           }
         }
+
         #email {
           color: $maincolor;
           margin: 3rem 0 0 0;
@@ -325,10 +437,12 @@ a {
           position: relative;
           margin: 0 20px 0 0;
           cursor: pointer;
+
           h4 {
             color: white;
             font-family: LilitaOne-Regular;
           }
+
           &:hover h4 {
             color: $maincolor;
           }
@@ -418,6 +532,11 @@ a {
 
     }
   }
+}
+
+.graycolor {
+  color: $gray;
+
 }
 
 .more-projects {
@@ -550,6 +669,7 @@ a {
     opacity: 1;
   }
 }
+
 .mainbtn {
   margin: 0.3rem 0;
   border-radius: 25px;
@@ -559,15 +679,19 @@ a {
   border: 1px solid #ff144a;
   background-color: white;
   color: #ff144a;
+
   &.selected {
 
     border: none;
     background-color: #ff144a;
     color: white;
   }
-  font-family: 'Sarabun', sans-serif;
+
+  font-family: 'Sarabun',
+  sans-serif;
   font-weight: 600;
 }
+
 @media (max-width: 780px) {
 
   /* width */
@@ -592,18 +716,22 @@ a {
       flex-direction: column;
       height: auto;
       margin: -200px auto 0 auto;
-        .badges {
-          display: flex;
+
+      .badges {
+        display: flex;
         flex-direction: row;
         justify-content: center;
+
         img {
           height: 50px;
           margin: 0;
         }
-        }
+      }
+
       br {
         display: none; // hide the BR tag for wider screens (i.e. disable the line break)
       }
+
       .brmobile {
         display: inherit
       }
@@ -632,6 +760,7 @@ a {
           margin: 2rem auto;
         }
       }
+
       .closing-phrase {
         p {
           width: 90%;
@@ -640,9 +769,11 @@ a {
 
       .col-2 {
         flex-direction: column;
+
         &.reversed-mob-col {
           flex-direction: column-reverse;
         }
+
         .left,
         .right {
           width: 100%;
@@ -706,4 +837,24 @@ a {
 
 
   }
+}
+
+
+@media (max-width: 780px) {
+  .fp-slidesNav.fp-bottom {
+    bottom: 87%;
+  }
+
+  .fp-slidesNav {
+    width: 100%;
+  }
+  
+
+.fp-slidesNav ul {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-end;
+  padding: 0 2rem 0 0;
+}
 }
