@@ -12,7 +12,15 @@ export class HomeComponent implements OnInit {
   @ViewChild('scene2') sceneElement2: ElementRef;
   @ViewChild('scene3') sceneElement3: ElementRef;
 
+  mobile = false;
+  desktop = true;
   ngOnInit() {
+
+    window.onresize = () => {
+      this.mobile = window.innerWidth <= 780;
+      this.desktop = !this.mobile;
+    }
+    
   }
 
   config: any;
@@ -48,12 +56,9 @@ export class HomeComponent implements OnInit {
       licenseKey: 'YOUR LICENSE KEY HERE',
       anchors: ['', 'love-to', 'featured-projects', 'footer'],
       menu: '#menu',
-      scrollHorizontally: true,
-      scrollOverflow: true,
       showActiveTooltip: true,
       slidesNavigation: true,
       slidesNavPosition: 'bottom',
-
       // fullpage callbacks
       afterResize: () => {
         console.log("After resize");

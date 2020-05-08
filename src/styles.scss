@@ -844,17 +844,14 @@ a {
   .fp-slidesNav.fp-bottom {
     bottom: 87%;
   }
-
   .fp-slidesNav {
     width: 100%;
   }
-  
-
-.fp-slidesNav ul {
-  display: flex;
-  flex-direction: row;
-
-  justify-content: flex-end;
-  padding: 0 2rem 0 0;
-}
+  .fp-slidesNav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 2rem 0 0;
+    
+  }
 }

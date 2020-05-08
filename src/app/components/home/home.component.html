@@ -1,8 +1,9 @@
 <span class="hola">
   <img class="top" src="./assets/home/curvetop.png" alt="">
   <img class="bottom" src="./assets/home/curvebottom.png" alt="">
-  <section fullpage id="fullpage" [options]="config" (ref)="getRef($event)">
-    <div class="section firstdisplay">
+  <p class="scroll-arrow">➜</p>
+  <section>
+    <div class=" firstdisplay">
       <span class="intro firstdisplay">
         <p>Designing to make <br />
           <span class="bold-lilita">technology</span> more <br />
@@ -10,7 +11,7 @@
         <img class="humantech" src="./assets/home/HumanTechHome.png" alt="">
       </span>
     </div>
-    <div class="section">
+    <div class="">
       <span class="passion">
         <p class="pass-intro">I'm Paula, I ❤️ to</p>
         <div class="passions desktop-pas">
@@ -46,11 +47,7 @@
           </article>
         </div>
         <div class="passions mob-pas">
-          <span class="btnss">
-            <button class="selected mainbtn"> Design Experiences</button>
-            <button class="mainbtn"> Conceptualize</button>
-            <button class="mainbtn"> Draw Data</button>
-          </span>
+        
           <article routerLink="/projects/uxresearch" routerLinkActive="active" class="passion-card firstdisplay">
             <div #mob_scene id="mob_scene" data-friction-x="0.1" pointer-events="true" data-friction-y="0.1"
               class="illustration">
@@ -59,21 +56,42 @@
             </div>
             <p class="title ">Design Experiences</p>
             <p class="desc">User Experience - Research</p>
-            <p class="highlighted linkto">Click to check out related work</p>
+            <p class="highlighted linkto">Check out related work ➜</p>
+          </article>
+          <article routerLink="/projects/branding" routerLinkActive="active" class="passion-card firstdisplay">
+            <div #scene2 id="scene2" data-friction-x="0.1" pointer-events="true" data-friction-y="0.1"
+              class="illustration">
+              <img data-depth="0" class="pau-img" src="./assets/home/visual-designer.png" alt="">
+              <img data-depth="1" class="hover-parallax" src="./assets/home/wiresvisual-designer.png" alt="">
+            </div>
+            <p class="title ">Create Strong Visual Concepts</p>
+            <p class="desc">Branding - Interfaces - Illustration</p>
+            <p class="highlighted linkto">Check out related work ➜</p>
+          </article>
+          <article routerLink="/projects/ui" routerLinkActive="active" class="passion-card firstdisplay">
+            <div #scene3 id="scene3" data-friction-x="0.1" pointer-events="true" data-friction-y="0.1"
+              class="illustration">
+              <img data-depth="0" class="pau-img" src="./assets/home/info-designer.png" alt="">
+              <img data-depth="1" class="hover-parallax" src="./assets/home/wiresinfo-designer.png" alt="">
+            </div>
+            <p class="title ">Design the way we consume data</p>
+            <p class="desc">Infographics - Interactive DataViz</p>
+            <p class="highlighted linkto">Check out related work ➜</p>
           </article>
         </div>
       </span>
 
     </div>
-    <div class="section">
-      <div class="slide">
+    <div *ngIf="desktop"  id="desk-feats">
+      <div class="firstdisplay">
         <span class="feat-project">
-          <span class="case-cta" routerLink="/projects/bioviz" routerLinkActive="active" >View case study</span>
+          <span class="case-cta" routerLink="/projects/bioviz" routerLinkActive="active">
+            <p>View case study</p></span>
           <div class="feat-tag">
             <p>FEATURED WORK</p>
           </div>
           <div class="work-cont">
-            <img class="backimg" src="./assets/home/backbio.png"  alt="">
+            <img class="backimg" src="./assets/home/backbio.png" alt="">
 
             <span class="work-info">
               <h1 class="work-title">BIOVIZ <img src="./assets/logo/circle.png" alt=""></h1>
@@ -93,14 +111,14 @@
           </div>
         </span>
       </div>
-      <div class="slide"> 
+      <div class="firstdisplay">
         <span class="feat-project">
-          <span class="case-cta" routerLink="/projects/woofme" routerLinkActive="active" >View case study</span>
+          <span class="case-cta" routerLink="/projects/woofme" routerLinkActive="active">View case study</span>
           <div class="feat-tag">
             <p>FEATURED WORK</p>
           </div>
           <div class="work-cont">
-            <img class="backimg" src="./assets/home/sunny-bck.png"  alt="">
+            <img class="backimg" src="./assets/home/sunny-bck.png" alt="">
 
             <span class="work-info">
               <h1 class="work-title">WOOF ME<img src="./assets/logo/circle.png" alt=""></h1>
@@ -116,18 +134,84 @@
               <p>Published on Springer</p>
               <p class="graycolor">Presented in Orlando, FL.</p>
               <br>
-              <p class="inner-bold">Ladridos Magazine  </p>
+              <p class="inner-bold">Ladridos Magazine </p>
               <p>Published on Spanish Magazine.v</p>
             </span>
 
           </div>
         </span>
       </div>
-      
+
     </div>
-    <div class="section">
+    <div *ngIf="mobile" id="mobile-feats">
+      <div class="firstdisplay">
+        <span class="m-feat-project">
+          <div class="feat-tag">
+            <p>FEATURED WORK</p>
+          </div>
+          <div class="work-cont">
+            <span class="work-info">
+              <img class="logo" src="./assets/home/logobio.png" alt="">
+              <img class="backimg" src="./assets/home/backbio.png" alt="">
+              <br>
+              <h1 class="work-title" routerLink="/projects/bioviz">BIOVIZ <img src="./assets/logo/circle.png" alt="">
+              </h1>
+              <br /> <br>
+              <p class="description">A bioacoustics research management software designed to improve the daily
+                experience of bird species researchers.</p>
+
+              <br />
+              <span class="recognitions">
+                <p class="inner-bold highlighted">Recognitions</p>
+                <p class="inner-bold">Innovative and Sustainable Project</p>
+                <p>By Goethe Institute - Humboldt Institute</p>
+              </span>
+              <p class="caption-tags">User Experience - Research - User Interface Design</p>
+              <br>
+              <span class="case-cta" routerLink="/projects/bioviz" routerLinkActive="active">
+                <p>View case study ➜</p> </span>
+              <br>
+            </span>
+          </div>
+        </span>
+      </div>
+      <div class="firstdisplay">
+        <span class="m-feat-project">
+          <div class="feat-tag">
+            <p>FEATURED WORK</p>
+          </div>
+          <div class="work-cont">
+            <span class="work-info">
+              <img class="logo" src="./assets/home/logowoof.png" alt="">
+              <img class="backimg" src="./assets/home/sunny-bck.png" alt="">
+
+              <h1 class="work-title" routerLink="/projects/woofme">WOOF ME <img src="./assets/logo/circle.png" alt="">
+              </h1>
+              <br /> <br>
+              <p class="description">A technology-enhanced training system for reducing separation anxiety in dogs.</p>
+
+              <br />
+              <span class="recognitions">
+                <p class="inner-bold highlighted">Recognitions</p>
+                <p class="inner-bold">HCI International 2019 Conference </p>
+                <p>Published on Springer</p>
+                <p class="graycolor">Presented in Orlando, FL.</p>
+                <br>
+                <p class="inner-bold">Ladridos Magazine </p>
+                <p>Published on Spanish Magazine.v</p>
+              </span>
+              <p class="caption-tags">User Experience - Research</p>
+              <br>
+              <span class="case-cta" routerLink="/projects/woofme" routerLinkActive="active">
+                <p>View case study ➜</p> </span>
+              <br>
+            </span>
+          </div>
+        </span>
+      </div>
+    </div>
+    <div class="">
       <span class="home-footer">
-        <div class="grayDiv"></div>
         <div class="take-a-look">
           <h2>Take a look at</h2>
           <p routerLink="/projects" routerLinkActive="active">my projects</p>

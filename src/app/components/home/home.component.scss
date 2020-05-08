@@ -37,6 +37,18 @@
         pointer-events: none;
 
     }
+
+    .scroll-arrow {
+        position: absolute;
+
+        text-align: center;
+        color: $maincolor;
+        top: 85vh;
+        left: 49vw;
+
+        transform: translateY(0) rotate(90deg);
+        z-index: 6;
+    }
 }
 
 .intro {
@@ -118,6 +130,67 @@
     opacity: 1;
 }
 
+.m-feat-project {
+    display: none;
+    height: auto;
+    padding: 110px 0 0 3%;
+    position: initial;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .feat-tag {
+        margin: 0 0 1rem 3%;
+        height: 30px;
+        border-top: 2px solid $maincolor;
+        width: 150px;
+    }
+
+    .work-cont {
+        width: 98%;
+        height: auto;
+        background-color: #f7f7f7;
+        padding: 1rem 1rem 3rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+
+        .caption-tags {
+            color: rgb(138, 138, 138);
+            margin: 1rem 0 0 0;
+        }
+
+        .recognitions {
+            margin: 1rem 0 0 0;
+        }
+
+        .logo {
+            position: absolute;
+            top: 3rem;
+            left: 30%;
+            width: auto;
+            height: 100px;
+        }
+
+        .backimg {
+            width: 95%;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        .case-cta {
+            color: $maincolor;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+:root {
+  --mainColor: #ff144a;
+}
+
 .feat-project {
     display: flex;
     flex-direction: column;
@@ -135,15 +208,25 @@
         z-index: 5;
         cursor: pointer;
 
-        &:hover {
-            color: $maincolor;
+        p {
+
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: auto 6.5px;
+            border-bottom: 0;
+            padding-bottom: .2em;
+            text-decoration: none;
+
+            &:hover {
+                color: $maincolor;
+            }
         }
     }
 
     .feat-tag {
         margin: 0 0 2rem 3%;
         border-top: 2px solid $maincolor;
-
     }
 
     .work-cont {
@@ -226,7 +309,6 @@
 
 .passion {
     display: flex;
-    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -410,6 +492,7 @@
     .fp-slidesNav {
         width: 100%;
     }
+
     .hola {
         .top {
             width: 100px;
@@ -424,9 +507,9 @@
     .intro {
         .humantech {
             width: 90%;
-            
 
-            
+
+
             max-width: 700px;
             margin-top: -3rem;
             mix-blend-mode: multiply;
@@ -447,7 +530,7 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            height: 45vh;
+            height: 55vh;
             margin: 3rem 0 2rem 0;
 
             h2 {
@@ -464,7 +547,7 @@
             flex-direction: column-reverse;
             padding: 1.5rem;
             width: 100%;
-            height: 50vh;
+
             justify-content: flex-end;
 
             .greet {
@@ -528,7 +611,7 @@
 
             .passion-card {
                 min-width: 80%;
-                margin: 0 0.6rem;
+                margin: 1rem 0.6rem;
 
                 .illustration {
                     height: 200px;
@@ -583,32 +666,49 @@
         }
     }
 
+    .m-feat-project {
+        display: flex;
+    }
+
     .feat-project {
+        height: 100vh;
         padding: 130px 0 0 3%;
-        display: none;
+        position: initial;
+
         .feat-tag {
             margin: 0 0 1rem 3%;
+            height: 30px;
             border-top: 2px solid $maincolor;
-
         }
 
         .case-cta {
-           top: 0;
+            top: 0;
             bottom: 0;
             left: 30%;
             color: $maincolor;
+            display: none
         }
 
         .work-cont {
+            display: none;
             width: 98%;
-            height: auto;
+            height: 80%;
             padding: 0.5rem;
             align-self: flex-start;
             flex-direction: column;
             justify-content: flex-start;
-            :nth-child(2) { order: 2; }
-            :nth-child(3) { order: 1; }
-            :nth-child(4) { order: 3; }
+
+            :nth-child(2) {
+                order: 2;
+            }
+
+            :nth-child(3) {
+                order: 1;
+            }
+
+            :nth-child(4) {
+                order: 3;
+            }
 
             .backimg {
                 left: 10%;
@@ -617,15 +717,19 @@
                 width: 80%;
                 opacity: 0.3;
             }
+
             p {
                 font-size: 16px;
             }
+
             .work-info {
                 width: 100%;
                 padding: 0 0 3rem 0;
+
                 h1 {
                     font-size: 25px;
                 }
+
                 p {
                     width: 95%;
                 }
@@ -642,19 +746,22 @@
 
             .work-logo {
                 padding: 0 0 0.5rem 0;
+
                 img {
                     height: auto;
                     width: 70px;
                 }
-                
+
             }
 
             .recognitions {
                 padding: 5% 10% 0 0;
                 z-index: 2;
+
                 :first-child {
                     margin: 0 0 0.5rem 0;
                 }
+
                 p {
                     font-size: 14px !important;
 
