@@ -8,17 +8,24 @@ import enterView from 'enter-view';
 })
 export class AboutComponent implements OnInit {
   @ViewChild('hola') one: ElementRef;
-  that = this;
+ 
   constructor() { }
 
   ngOnInit() {
+    var that = this;
     enterView({
       selector: '.step',
       enter(el){
-          el.classList.add('entered');
+        var activeStep = el.dataset.index;
+        el.classList.add('entered');
+        that.updateChart(activeStep,  'Enter');
       },
       exit: (el) => {
+        el.classList.add('passed');
         el.classList.remove('entered');
+        var _activeStep = el.dataset.index - 1;
+        that.updateChart(_activeStep, 'Exit');
+
       },
       progress: (el, progress) => {
         el.style.opacity = progress;
@@ -27,5 +34,7 @@ export class AboutComponent implements OnInit {
       once: false, // trigger just once
     });
   }
-
+  updateChart(received, str) {
+    console.log(received, str);
+  }
 }

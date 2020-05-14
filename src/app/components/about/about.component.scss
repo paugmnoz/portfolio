@@ -438,26 +438,140 @@ img {
 .scrolly {
   width: 100%;
   margin: 5rem 0 0 0;
+  position: relative;
   article {
     position: relative;
     margin: 5rem 0 0 0;
-    .step, .hola, .durante, .fin{
-      height: 30vh;
+    .step {
       opacity: 0.2;
+      margin: 0 0 350px 0;
       &.entered {
         opacity: 1;
       }
+      &.passed {
+        opacity: 0.2;
+
+      }
     }
+  }
+  .title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 150px;
+    left: 2rem;
+    width: 300px;
+    z-index: 5;
+    background-color: white;
   }
   figure.sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 150px;
+    margin: 2rem 0 0 0;
+    top: 250px;
     width: 40%;
     left: 50%;
   }
 }
 @media (max-width: 780px) {
+  .more-section {
+    flex-direction: column;
+    justify-content: flex-start;
+    .left-about {
+      width: 98%;
+    }
+    .right-about {
+      width: 98%;
+      .skills {
+        h2 {
+          margin: 1rem 0 0 0;
+  
+        }
+        article {
+          margin: 0 0 1rem 0;
+          padding: 1rem;
+          border: 0.5px solid rgb(241, 241, 241);
+          border-radius: 7px;
+          &:hover {
+            p {
+              &:first-child {
+              color: $maincolor;
+              }
+            }
+          }
+      }
+  
+      .competences {
+        width: 100%;
+        span {
+          margin: 1rem 0 0 15px;
+          p {
+            margin: 0 1rem 1rem 0;
+          }
+        }
+      }
+    }
+  }
+  } 
+
+  
+  .home-footer {
+    justify-content: space-around;
+
+    .grayDiv {
+        height: 50px;
+        width: 98%;
+    }
+
+    .take-a-look {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 55vh;
+        margin: 3rem 0 2rem 0;
+
+        h2 {
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 1rem 0 0 0;
+        }
+    }
+
+    .foot {
+        flex-direction: column-reverse;
+        padding: 1.5rem;
+        width: 100%;
+
+        justify-content: flex-end;
+
+        .greet {
+            h2 {
+                font-size: 18px;
+            }
+
+            margin: 0 0 1rem 0;
+        }
+
+        p {
+            width: 90%;
+            font-size: 15px;
+            text-align: right;
+            margin: 2rem 0 0 10%;
+        }
+    }
+}
+  .scrolly {
+    figure.sticky {
+      top: 250px;
+      width: 90%;
+      left: 1rem;
+    }
+    
+}
   p {
     font-size: 18px;
   }
