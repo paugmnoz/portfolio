@@ -40,6 +40,7 @@ button {
     display: inherit;
     visibility: visible;
     opacity: 1;
+    z-index: -5;
   }
 }
 
@@ -114,7 +115,7 @@ img {
 
 #cali:hover {
   img.city {
-    display: inherit;
+    display: block;
     visibility: visible;
     opacity: 1;
   }
@@ -390,6 +391,11 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    .me {
+      width: 480px;
+      height: auto;
+      margin: 3rem 0 0 0;
+    }
   }
 
   .right-about {
@@ -439,19 +445,63 @@ img {
   width: 100%;
   margin: 5rem 0 0 0;
   position: relative;
+  figure {
+    img {
+      max-width: 500px;
+      height: auto;
+      &.zero {
+        margin: 0 0 0 -5rem;
+        padding: 120px 0;
+      }
+      &.one {
+        margin: 0 0 0 10rem;
+      }
+      &.two {
+        margin: 0 0 0 10rem;
+      }
+      &.three {
+        margin: -4rem 0 0 10rem;
+      }
+      &.four {
+        margin: -2rem 0 0 10rem;
+      }
+      &.five {
+        margin: -4rem 0 0 10rem;
+      }
+      &.six {
+        margin: -4rem 0 0 10rem;
+      }
+    }
+  }
   article {
     position: relative;
-    margin: 5rem 0 0 0;
+    margin: 10rem 0 0 0;
+    width: 40%;
     .step {
       opacity: 0.2;
-      margin: 0 0 350px 0;
+      margin:  0 0 350px  0;
+      background-color: rgba(255, 255, 255, 0.822);
+      display: flex;
+      flex-direction: row;
+      .highlighted {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .description {
+        margin: 0 0 0 2.5rem;
+      }
+      .date {
+        text-align: right;
+      }
       &.entered {
         opacity: 1;
+     
       }
       &.passed {
-        opacity: 0.2;
+        opacity: 0.2 !important;
 
       }
+     
     }
   }
   .title {
@@ -469,7 +519,7 @@ img {
     margin: 2rem 0 0 0;
     top: 250px;
     width: 40%;
-    left: 50%;
+    left: 40%;
   }
 }
 @media (max-width: 780px) {
@@ -511,6 +561,21 @@ img {
       }
     }
   }
+  }
+  .scrolly {
+    .title {
+      top: 120px;
+    }
+    figure {
+      img {
+        width: 98%;
+        height: auto;
+        margin: o auto;
+      }
+    }
+    article {
+    padding: 30vh 0 0 0;
+    }
   } 
 
   
@@ -569,6 +634,40 @@ img {
       top: 250px;
       width: 90%;
       left: 1rem;
+    }
+    figure {
+      img {
+        max-width: 500px;
+        height: auto;
+        &.zero {
+          margin: 0 ;
+          padding: 120px 0;
+        }
+        &.one {
+          margin: 0;
+        }
+        &.two {
+          margin: 0;
+        }
+        &.three {
+          margin:0;
+        }
+        &.four {
+          margin: 0;
+        }
+        &.five {
+          margin:0;
+        }
+        &.six {
+          margin: 0;
+        }
+      }
+    }
+    article {
+      width: 98%;
+      p {
+        background-color: transparent;
+      }
     }
     
 }
