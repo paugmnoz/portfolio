@@ -5,6 +5,7 @@
   <section>
     <div class=" firstdisplay">
       <span class="intro firstdisplay">
+        <img class="hello-img" src="./assets/about/timeline/hello.png" alt="">
         <p>Designing to make<br />
           <span class="bold-lilita">technology</span> each time more <br />
           <span class="bold-lilita">human</span> <img src="./assets/logo/circle.png" alt=""> </p>
@@ -13,7 +14,7 @@
     </div>
     <div class="">
       <span class="passion">
-        <p class="pass-intro">I'm Paula, I ❤️ to</p>
+        <p class="pass-intro">What I ❤️ to do is</p>
         <div class="passions desktop-pas">
           <article routerLink="/projects/uxresearch" routerLinkActive="active" class="passion-card firstdisplay">
             <div #scene id="scene" data-friction-x="0.1" pointer-events="true" data-friction-y="0.1"
@@ -82,7 +83,7 @@
       </span>
 
     </div>
-    <div *ngIf="desktop"  id="desk-feats">
+    <div id="desk-feats">
       <div class="firstdisplay">
         <span class="feat-project">
           <span class="case-cta" routerLink="/projects/bioviz" routerLinkActive="active">
@@ -141,9 +142,8 @@
           </div>
         </span>
       </div>
-
     </div>
-    <div *ngIf="mobile" id="mobile-feats">
+    <div id="mobile-feats">
       <div class="firstdisplay">
         <span class="m-feat-project">
           <div class="feat-tag">

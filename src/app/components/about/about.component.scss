@@ -2,6 +2,31 @@
 $line-height: 80px;
 $line-height-abs: -80px;
 
+.hola {
+  width: 100%;
+  position: relative;
+
+  .top {
+      position: fixed;
+      top: 0;
+      width: 200px;
+      right: 0;
+      z-index: 2;
+      pointer-events: none;
+  }
+
+  .bottom {
+      position: fixed;
+      width: 200px;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      pointer-events: none;
+
+  }
+
+}
+
 p {
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.719);
@@ -29,17 +54,16 @@ button {
 .about-img {
   position: absolute;
   top: 200px;
-  right: 10%;
-  display: none;
+  right: 0;
   height: 400px;
   width: auto;
   opacity: 0;
   z-index: -1;
 
   &.me {
-    display: inherit;
+    display: block;
     visibility: visible;
-    opacity: 1;
+    opacity: 1 !important;
     z-index: -5;
   }
 }
@@ -50,7 +74,7 @@ button {
   height: auto;
 
   &.me {
-    margin: 5rem 0 1rem 0;
+    margin: 3rem 0 1rem 0;
   }
 }
 
@@ -69,6 +93,8 @@ img {
   max-width: 1250px;
   margin: auto;
   height: auto;
+  position: relative;
+
 }
 
 .light-font {
@@ -154,6 +180,7 @@ img {
       visibility: visible;
       opacity: 1;
       top: 20vh;
+      right: -10px;
       height: 500px;
     }
   }
@@ -165,6 +192,8 @@ img {
     -webkit-filter: none;
     /* Safari 6.0 - 9.0 */
     filter: none;
+    visibility: visible;
+
   }
 }
 
@@ -449,9 +478,15 @@ img {
     img {
       max-width: 500px;
       height: auto;
+      
       &.zero {
         margin: 0 0 0 -5rem;
         padding: 120px 0;
+        display: inherit;
+
+        &.mob {
+          display: none;
+        }
       }
       &.one {
         margin: 0 0 0 10rem;
@@ -523,12 +558,28 @@ img {
   }
 }
 @media (max-width: 780px) {
+  
+  .hola {
+    .top {
+        width: 100px;
+    }
+
+    .bottom {
+        width: 100px;
+
+    }
+  }
   .more-section {
     flex-direction: column;
     justify-content: flex-start;
     .left-about {
       width: 98%;
+      .me {
+        width: 98%;
+        margin: 2rem 0;
+      }
     }
+
     .right-about {
       width: 98%;
       .skills {
@@ -564,7 +615,11 @@ img {
   }
   .scrolly {
     .title {
-      top: 120px;
+      top: 80px;
+      padding: 3rem 0;
+      background: rgb(255,255,255);
+      background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 24%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%); 
+        
     }
     figure {
       img {
@@ -574,7 +629,21 @@ img {
       }
     }
     article {
-    padding: 30vh 0 0 0;
+    padding: 15vh 0 0 0;
+      .step {
+        flex-direction: column;
+        margin:  0 0 250px  0;
+        padding: 3rem 0;
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 24%, rgba(255,255,255,0.7) 80%, rgba(255,255,255,0) 100%); 
+        .date {
+          text-align: left;
+        }
+        .description {
+          margin: 2rem 0 0 0;
+        }
+
+      }
     }
   } 
 
@@ -631,17 +700,24 @@ img {
 }
   .scrolly {
     figure.sticky {
-      top: 250px;
+      top: 285px;
       width: 90%;
       left: 1rem;
     }
     figure {
       img {
-        max-width: 500px;
+        width: 110%;
+        max-width: 700px;
+        margin: 0 0 0 -1rem;
         height: auto;
         &.zero {
           margin: 0 ;
-          padding: 120px 0;
+          padding: 40px 0;
+          display: none;
+
+          &.mob {
+            display: inherit;
+          }
         }
         &.one {
           margin: 0;
@@ -726,7 +802,7 @@ img {
   }
 
   .name {
-    margin: 5rem 0 0 0;
+    margin: 3rem 0 0 0;
   }
 
   .about-mobile {
@@ -784,51 +860,5 @@ img {
     }
   }
 
-  .skill-intro {
-    margin: 2rem 0 0 0;
-    padding: 2rem 0 2rem 0;
 
-    p {
-      margin: 1.5rem 0 0.4rem 0;
-      width: 80%;
-      font-size: 17px;
-      text-align: center;
-
-    }
-  }
-
-  .skils-section,
-  .skill-cont {
-    flex-direction: column;
-    align-content: center;
-  }
-
-  .skill-cont {
-    .hint {
-      display: block;
-      color: white;
-      opacity: 0.5;
-    }
-  }
-
-  .skils-section,
-  .skill-intro {
-    height: auto;
-  }
-
-  .skils-section {
-    padding: 2rem 0 0 0;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 15px;
-  }
-
-  .super-box {
-    margin: 0;
-    overflow-x: hidden;
-  }
-
-  .c-scrolldown {
-    display: none;
-  }
 }
