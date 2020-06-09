@@ -66,6 +66,7 @@ button {
     opacity: 1 !important;
     z-index: -5;
   }
+  
 }
 
 .about-mobile {
@@ -414,7 +415,7 @@ img {
   justify-content: space-around;
   align-items: flex-start;
   align-content: center;
-
+margin: 2rem 0 0 0;;
   .left-about {
     width: 50%;
     display: flex;
@@ -424,6 +425,11 @@ img {
       width: 480px;
       height: auto;
       margin: 3rem 0 0 0;
+    }
+    .comp {
+      width: 480px;
+      height: auto;
+      margin: 0 0 2rem 0;
     }
   }
 

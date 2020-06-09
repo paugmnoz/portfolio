@@ -6,7 +6,16 @@
   .intro {
     align-content: center;
     align-items: center;
+    p {
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
 
+  .who {
+    align-content: center;
+    align-items: center;
     .left {
       display: flex;
       flex-direction: row;
@@ -70,6 +79,26 @@
     }
   }
 
+  .intro-bio {
+    padding: 3rem 0;
+    .left {
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+      }
+     
+    }
+    .right {
+      padding: 4rem 0 0 0;
+    }
+  }
+  .ilustration-col {
+    padding: 2rem 0;
+  }
   .question {
     background-color: #272e2e;
     padding: 2rem 0;
@@ -77,6 +106,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    &.two{
+      background-color: #fafafa;
+      h2 {
+
+        color: #272e2e;
+      }
+    }
 
     h2 {
       width: 50%;
@@ -88,6 +124,22 @@
     }
   }
 
+  .img-only {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 80%;
+      height: auto;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    &.bio-one{
+      background-color: #232929;
+    }
+  }
 
   .vest {
     width: 100%;
@@ -151,56 +203,6 @@
       height: auto;
       max-width: 850px;
     }
-  }
-
-  .pilot-vest {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    .inner-pilot {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-
-      .left {
-        width: 30%;
-        max-width: 300px;
-        height: 420px;
-        text-align: right;
-        color: white;
-        background-color: #232834;
-        padding: 2rem;
-        margin: 3.5rem 0 0 0;
-      }
-
-      .right {
-        width: 60%;
-        position: relative;
-
-        img {
-          width: 100%;
-          height: auto;
-          max-width: 950px;
-        }
-
-        .float-img {
-          position: absolute;
-          max-width: 400px;
-          -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-          bottom: 7px;
-          left: -300px;
-        }
-      }
-    }
-
-    h2 {
-      font-weight: 300;
-    }
-
   }
 
   .exp-section {

@@ -306,6 +306,12 @@ a {
       ;
     }
 
+    .single-col {
+      width: 90%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
     .col-2 {
       width: 90%;
       max-width: 1300px;
@@ -338,7 +344,10 @@ a {
       .right {
         width: 55%;
         padding: 0 2rem;
-
+        h3 {
+          width: 80%;
+        }
+        
         p {
           width: 70%;
         }
