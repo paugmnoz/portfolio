@@ -24,6 +24,9 @@
       max-width: 75px;
     }
     &.menu {
+      background-color: white;
+      padding: 0.2rem 1rem ;
+      border-radius: 50px;
       ul {
         display: flex;
         flex-direction: row;
@@ -32,6 +35,9 @@
 
         li {
           margin: 0 0 0 2rem;
+          &:first-child{
+            margin: 0;
+          }
           background-color: white;
           padding: 2px 8px;
           border-bottom: solid 4px $noneColor;
@@ -45,12 +51,15 @@
             display: none;
           }
           &:hover {
+            color: $maincolor;
+
             border-bottom: solid 4px $maincolor;
           }
           &:hover~.circle {
             visibility: visible;
           }
           &.active {
+            color: $maincolor;
             border-bottom: solid 4px $maincolor;
           }
         }

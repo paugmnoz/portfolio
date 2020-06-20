@@ -29,6 +29,70 @@
     }
   }
 
+  .context {
+    padding: 5rem 0 5.5rem 0;
+
+    .left {
+      position: relative;
+
+      img {
+        position:sticky; 
+        top:7rem;
+        left: 0;
+        width: 100%;
+        height: auto;
+        
+      }
+      .quote {
+        position: relative;
+        padding:  1rem 0 2rem 0;
+        display: inline-block;
+        font-weight: 300;
+        position:sticky; 
+        top:1rem;
+        z-index: 5;
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 24%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%); 
+      }
+    }
+  }
+
+  .ilustration-col {
+    .left {
+      display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+      img {
+        
+        &.draw {
+          width: 70%;
+        }
+        width: 90%;
+        height: auto;
+        margin: 2rem auto 0 auto;
+      }
+    }
+  }
+
+  .happend {
+    align-items: center;
+  }
+  .ux-methods {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 4rem 0;
+    article {
+      width: 25%;
+      p {
+        text-align: center;
+      }
+    }
+  }
   .explain,
   .mind {
     padding: 5rem 0 2.5rem 0;
@@ -37,8 +101,6 @@
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      ;
-
       .quote {
         position: relative;
         display: inline-block;
@@ -125,11 +187,12 @@
   }
 
   .img-only {
-    width: 100vw;
+    width: 99.4vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     img {
       width: 80%;
       height: auto;
@@ -234,69 +297,6 @@
         width: 100%;
         max-width: 300px;
         border-radius: 50%;
-      }
-    }
-  }
-
-  .photoframe {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: center;
-    align-items: flex-start;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    user-select: none;
-
-    &.ph-1 {
-      z-index: 50;
-    }
-
-    &.ph-2 {
-      flex-direction: row;
-      align-items: flex-end;
-      margin: -83px 0 0 0;
-      z-index: 5;
-    }
-
-    .dog {
-      width: 22.5%;
-      overflow: hidden;
-      min-height: 200px;
-      max-height: 350px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-content: center;
-
-      &.op20 {
-        opacity: 0.2;
-      }
-
-      &.op50 {
-        opacity: 0.7;
-      }
-
-      img {
-        height: 100%;
-        width: auto;
-        margin: auto;
-      }
-    }
-
-    .vest {
-      width: 55%;
-      overflow: hidden;
-      max-height: 430px;
-
-      img {
-        width: 100%;
-        height: auto;
-        margin: auto;
       }
     }
   }
