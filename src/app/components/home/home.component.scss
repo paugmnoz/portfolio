@@ -64,6 +64,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 1440px;
     height: 100vh;
     .hello-img {
         width: 270px;
@@ -333,6 +334,7 @@
 
     .passions {
         width: 100%;
+        max-width: 1440px;
         display: flex;
         flex-direction: row;
         justify-content: center;
