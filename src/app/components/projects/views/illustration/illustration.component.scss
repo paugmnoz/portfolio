@@ -45,23 +45,26 @@ div{
         }
 
     }
+  
     .cover {
-        width: 400px;
-        height: 250px;
-        max-width: 400px;
+        width: 370px;
+        height: 260px;
         margin: 0 0 10px 0;
         padding: 0;
-        background: #fff;
+        background: rgb(226, 130, 130);
         overflow: hidden;
-       border-radius: 2px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
         .one {
-            position: relative;
-            top: 0;
-            left: 0;
-            -webkit-transform: scale(1.07);
-                transform: scale(1.07);
-                -webkit-transition: .3s ease-in-out;
-                transition: .3s ease-in-out;
+          position: relative;
+    
+          -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+          -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
         }
         img {
             width: 100%;

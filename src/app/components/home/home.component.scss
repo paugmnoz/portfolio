@@ -66,6 +66,7 @@
     width: 100%;
     max-width: 1440px;
     height: 100vh;
+    margin: auto;
     .hello-img {
         width: 270px;
         height: auto;
@@ -255,11 +256,12 @@
 
         .backimg {
             position: absolute;
-            left: 11%;
-            top: 15%;
+            left: 0;
+            top: 0;
             z-index: 1;
             pointer-events: none;
             width: 60vh;
+            transform: translate(50%, 50%);
         }
 
         p {

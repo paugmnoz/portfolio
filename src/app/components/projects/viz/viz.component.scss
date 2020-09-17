@@ -31,11 +31,14 @@
 .overview {
   height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: flex-start;
   overflow-y: auto;
-  width: 50vw;
-  padding-bottom: 3rem;
+  margin: 0 0 0 3rem;  padding-top: 4.5rem;
+  .container {
+    margin: 2rem 0 1rem 0;
+  }
 
 div {
   width: 400px;
@@ -85,19 +88,21 @@ div {
 
   .cover {
     width: 370px;
-    height: 370px;
+    height: 260px;
     margin: 0 0 10px 0;
     padding: 0;
     background: rgb(226, 130, 130);
     overflow: hidden;
     border-radius: 4px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     .one {
       position: relative;
-      top: 0;
-      left: 0;
-      -webkit-transform: scale(1.07);
-      transform: scale(1.07);
+
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05);
       -webkit-transition: .3s ease-in-out;
       transition: .3s ease-in-out;
     }
@@ -303,7 +308,7 @@ div {
 
       .cover {
         width: 100%;
-        height: 80vw;
+        height: 70vw;
         margin: 0 0 10px 0;
         padding: 0;
         background: #fff;
