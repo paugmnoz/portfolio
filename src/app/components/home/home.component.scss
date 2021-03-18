@@ -60,17 +60,33 @@
 
 .intro {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 1440px;
     margin: auto;
     height: 100vh;
-    margin: auto;
-    .hello-img {
-        width: 270px;
-        height: auto;
+    position: relative;
+
+    .text-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        width: 50%;
+        height: 80vh;
+        padding: 5rem 0 0 5rem;
+        h1 {
+            font-size: 50px;
+        }
+        span{
+            margin: 0 0 100px 0;
+        }
+        .gray-text {
+            font-size: 18px;
+            color: $gray;
+        }
     }
 
     img {
@@ -78,35 +94,86 @@
         -khtml-user-drag: none;
         -moz-user-drag: none;
         -o-user-drag: none;
-        user-drag: none;
-    }
-
-    .humantech {
-        width: 40%;
-        max-width: 400px;
-        margin-top: -5rem;
-        margin-left: -1.5rem;
-        mix-blend-mode: multiply;
-        transform: translatey(0px);
-        animation: float 6s ease-in-out infinite;
-
+        -user-drag: none;
     }
 
     p {
-        font-size: 21px;
-        text-align: center;
-        margin-top: 5rem;
+        text-align: left;
+        font-size: 26px;
+        font-weight: 200;
+        margin-top: 1rem;
+    }
 
-        .bold-lilita {
-            font-family: LilitaOne-Regular;
-            font-size: 23px;
-        }
+    .me {
+        width: 45%;
+        max-width: 600px;
+        height: auto;
+        margin: 0 2rem 0 0;
+    }
+}
 
-        img {
-            width: 10px;
-            height: 10px;
+.work {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    h1 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .project-preview {
+        width: 30%;
+        max-width: 700px;
+        height: 550px;
+        margin: 2rem;
+    }
+
+    .featured-project {
+        width: 100%;
+        max-width: 1440px;
+        height: 400px;
+        margin: 2rem 0;
+    }
+
+    article {
+        transition: box-shadow 0.5s ease-in-out;
+        &:hover{
+            -webkit-box-shadow:inset 0px 0px 0px 10px #fff;
+        -moz-box-shadow:inset 0px 0px 0px 10px #fff;
+        box-shadow:inset 0px 0px 0px 10px #fff;
         }
     }
+
+   article:nth-child(1) {
+        order: 0;
+        flex: 1 1 auto;
+        align-self: auto;
+        }
+    
+    article:nth-child(2) {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        background-color: #8EEC74;
+        }
+    
+    article:nth-child(3) {
+        order: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        background-color: #FFB200;
+        }
+        article:nth-child(4) {
+            order: 0;
+            flex: 0 1 auto;
+            align-self: auto;
+            background-color: #333F48;
+            }
 }
 
 #scene:hover {
@@ -329,7 +396,7 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-
+    margin: 150px 0 0 0;
     .pass-intro {
         font-size: 23px;
         margin: 0 0 3.5rem 0;
@@ -495,14 +562,8 @@
 }
 
 @media (min-width: 781px) and (max-width: 1000px) {
-    .intro {
-        .humantech {
-            width: 80%;
-            max-width: 900px;
-            margin-top: -5rem;
-            mix-blend-mode: multiply;
-        }
-    }
+    
+
 }
 
 @media (max-width: 780px) {
@@ -528,14 +589,16 @@
     }
 
     .intro {
-        .humantech {
-            width: 90%;
-
-
-
+        flex-direction: column;
+    
+        .text-intro {
+            padding: 0;
+        }
+    
+        .me {
+            width: 95%;
             max-width: 700px;
-            margin-top: -3rem;
-            mix-blend-mode: multiply;
+            margin: 0 auto;
         }
     }
 
