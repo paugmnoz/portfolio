@@ -125,6 +125,35 @@
         width: 100%;
         text-align: left;
     }
+    .moreprojects {
+        width: 100%;
+        text-align: center;
+        margin: 25px 0;
+        button {
+            margin: 0.3rem 0;
+            border-radius: 45px;
+            padding: 15px 25px;
+            cursor: pointer;
+          
+            border: 1px solid #ff144a;
+            background-color: #ff144a;
+            color: white;;
+            font-size: 18px;
+            &.selected {
+          
+              border: none;
+              background-color: #ff144a;
+              color: white;
+            }
+          
+            font-family: 'Sarabun',
+            sans-serif;
+            font-weight: 600;
+          }
+        a {
+            text-decoration: underline;
+        }
+    }
 
     .project-preview {
         width: 100%;
@@ -185,7 +214,13 @@
         h2 {
             font-family: 'Work Sans', sans-serif;
             font-weight: 900; 
-            margin: 1rem 0 0 0;       
+            margin: 1rem 0 0 0;  
+            
+        color: $dark !important;     
+        }
+        p {
+
+        color: $gray !important;
         }
         div {
             .shadow{
@@ -237,7 +272,7 @@
         min-width: 432px;
 
             div {
-                background-color: #333F48;
+                background-color: #140101;
             }
             
             }

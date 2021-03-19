@@ -6,16 +6,51 @@
     align-items: center;
     align-content: center;
 }
+
+
+  
+.foot {
+  margin: 150px 0 0 0;
+  padding: 3rem 0;
+  background-color: $dark;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  .mail {
+      a {
+
+          color: $maincolor;
+          font-weight: 600;
+          font-size: 24px;
+      }
+  }
+
+  p {
+      margin: 3rem 0 0 0;
+      color: #776d92;
+  }
+}
 section {
     position: relative;
   margin: 94px auto 0 auto;
-  padding: 0 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 90%;
-  max-width: 1440px;
+  width: 100%;
+
+  >span {
+    width: 100%;
+    max-width: 1440px;
+    margin: o auto;
+    padding: 0 30px;
+
+  }
   div {
     &.menu {
       margin: 3rem 0 0 0;
@@ -124,12 +159,36 @@ section {
 }
 
 @media (max-width: 780px) {
+  .foot {
+    flex-direction: column-reverse;
+    padding: 1.5rem;
+    width: 100%;
+
+    justify-content: flex-end;
+
+    .greet {
+        h2 {
+            font-size: 18px;
+        }
+
+        margin: 0 0 1rem 0;
+    }
+
+    p {
+        width: 90%;
+        font-size: 15px;
+        text-align: right;
+        margin: 2rem 0 0 10%;
+    }
+}
   section {
     flex-direction: column;
     justify-content: flex-start;
     margin: 94px 0 0 0;
     height: auto;
     width: 100%;
+
+
 
     div {
       &.menu {
